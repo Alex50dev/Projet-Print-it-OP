@@ -28,20 +28,6 @@ const dots = document.querySelectorAll('.dot');
 
 dots[0].classList.toggle('dot_selected');
 
-dots.forEach(dot => {
-	dot.addEventListener("click",function(event){
-		
-		index = event.target.dataset.id;
-		for(let i = 0; i < dots.length; i++){
-			if (i==index){dots[index].classList.add('dot_selected');}else{dots[i].classList.remove('dot_selected');}
-		}
-
-		imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`;
-		imagetagLine.innerHTML = `${slides[index].tagLine}`;
-
-	});
-});
-
 arrowArrowLeft.addEventListener("click",function(event){
 
 	dots[index].classList.toggle('dot_selected');
